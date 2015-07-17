@@ -1,0 +1,5 @@
+{% if content %}
+      {{ content.plain_content }}
+{% else %}
+{% if user.is_admin %}Please load a Content Block with slug &#39;{{ slug }}&#39; in the database.{% endif %}
+{% endif %}

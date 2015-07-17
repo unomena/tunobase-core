@@ -1,0 +1,10 @@
+{% load i18n %}
+{% if bannerset %}
+	<ul id="slider">
+		{% for banner in bannerset.banners.permitted.for_current_site %}
+			<li>{{ banner.rich_content|safe }}</li>
+		{% endfor %}
+	</ul>
+{% else %}
+{% if user.is_admin %}<p style="color: red;">{% trans "Please load an HTML BannerSet with slug" %} &#39;{{ slug }}&#39; {% trans "in the database." %}</p>{% endif %}
+{% endif %}
