@@ -18,10 +18,11 @@ class Migration(SchemaMigration):
     def backwards(self, orm):
 
         # Changing field 'HTMLBanner.rich_content'
-        db.alter_column(u'core_htmlbanner', 'rich_content', self.gf('ckeditor.fields.RichTextField')(null=True))
+        #db.alter_column(u'core_htmlbanner', 'rich_content', self.gf('ckeditor.fields.RichTextField')(null=True))
 
         # Changing field 'ContentModel.rich_content'
-        db.alter_column(u'core_contentmodel', 'rich_content', self.gf('ckeditor.fields.RichTextField')(null=True))
+        #db.alter_column(u'core_contentmodel', 'rich_content', self.gf('ckeditor.fields.RichTextField')(null=True))
+        pass
 
     models = {
         u'auth.group': {
