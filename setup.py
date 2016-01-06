@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tunobase-core',
-    version='1.1.31',
+    version='1.1.32',
     description='Unomena Base Django Application',
     long_description=open('README.rst', 'r').read() + open('AUTHORS.rst', 'r').read(),
     author='Unomena',
