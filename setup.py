@@ -4,24 +4,24 @@ setup(
     name='tunobase-core',
     version='1.1.31',
     description='Unomena Base Django Application',
-    long_description = open('README.rst', 'r').read() + open('AUTHORS.rst', 'r').read(),
+    long_description=open('README.rst', 'r').read() + open('AUTHORS.rst', 'r').read(),
     author='Unomena',
     author_email='dev@unomena.com',
     license='BSD',
     url='http://git.unomena.net/unomena/tunobase',
-    packages = find_packages(),
-    dependency_links = [
+    packages=find_packages(),
+    dependency_links=[
         'http://github.com/unomena/django-photologue/tarball/2.8.praekelt#egg=django-photologue-2.8.praekelt',
         'http://github.com/unomena/django-redactor/tarball/0.0.2#egg=redactor-0.0.2',
     ],
-    install_requires = [
+    install_requires=[
         'South',
         'redactor==0.0.2',
         'django-photologue==2.8.praekelt',
         'django-preferences',
         'python-memcached',
-        'celery==3.0.23',
-        'django-celery==3.0.23',
+        'celery>=3.1.19',
+        'django-celery>=3.1.17',
         'django-honeypot',
         'Pillow',
         'google-api-python-client==1.2',
@@ -32,11 +32,11 @@ setup(
     tests_require=[
         'django-setuptest>=0.1.2',
         'pysqlite>=2.5',
-	    'pycurl'
+        'pycurl'
     ],
     test_suite="setuptest.setuptest.SetupTestSuite",
     include_package_data=True,
-    classifiers = [
+    classifiers=[
         "Programming Language :: Python",
         "License :: OSI Approved :: BSD License",
         "Development Status :: 4 - Beta",
